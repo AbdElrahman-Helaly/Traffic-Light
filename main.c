@@ -87,6 +87,8 @@ DIO_voidsetportvalue(DIO_u8PORTC,SevenSegment(i));
 	CLCD_vidSendCommand(lcd_Clear);
 	CLCD_SendString("     GO NOW   ");
 
+	DIO_voidsetportvalue(DIO_u8PORTC,SevenSegment(0));
+	DIO_voidSetPinvalue(DIO_u8PORTD,DIO_u8PIN2,DIO_u8PIN_Low);
 	_delay_ms(200);
 	CLCD_vidSendCommand(lcd_Clear);
 
